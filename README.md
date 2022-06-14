@@ -2,7 +2,8 @@
 
 ## Built With
 - [Android Studio](https://developer.android.com/studio)
-- [Kotlin](https://developer.android.com/kotlin) (Though didn't write a single line of kotlin code here)
+- [Kotlin](https://developer.android.com/kotlin)
+- Github Copilot
 
 ## Features
 - Setting of a Nickname
