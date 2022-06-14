@@ -12,6 +12,6 @@
 ## Preview
 - Suppose, if we set the nickname 'Sherlock', then the app will run like this :
 <p align="center"> 
-  <img src="./aboutme1.png" width="180" height="320"> 
-  <img src="./aboutme2.png" width="180" height="320"> 
+  <img src="./aboutme1.png" width="360" height="640"> 
+  <img src="./aboutme2.png" width="360" height="640"> 
 </p>
