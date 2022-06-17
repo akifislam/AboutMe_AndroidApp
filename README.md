@@ -1,4 +1,4 @@
-<h1 align="center">Dice Roller (Android App)</h1>
+<h1 align="center">About Me (Android App with Scrollbar & LinearLayout)</h1>
 
 ## Built With
 - [Android Studio](https://developer.android.com/studio)
@@ -13,6 +13,5 @@
 ## Preview
 - Suppose, if we set the nickname 'Sherlock', then the app will run like this :
 <p align="center"> 
-  <img src="./aboutme1.png" width="310" height="640"> 
-  <img src="./aboutme2.png" width="310" height="640"> 
+  <img src="./AboutMeSample.gif" width="436" height="936"> 
 </p>
