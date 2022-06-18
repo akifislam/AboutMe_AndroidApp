@@ -13,5 +13,5 @@
 ## Preview
 - Suppose, if we set the nickname 'Sherlock', then the app will run like this :
 <p align="center"> 
-  <img src="./AboutMeSample.gif" width="436" height="936"> 
+  <img src="./AboutMeSample.gif" width="242" height="520"> 
 </p>
