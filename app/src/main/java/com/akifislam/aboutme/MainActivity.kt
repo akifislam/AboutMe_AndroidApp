@@ -2,40 +2,45 @@
 package com.akifislam.aboutme
 
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.view.View
+import com.akifislam.aboutme.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        var nicknametext = findViewById<TextView>(R.id.nickname_text)
-        var nicknameedit = findViewById<EditText>(R.id.nicknameEdit)
-        var donebutton = findViewById<TextView>(R.id.done_btn)
+        binding.doneBtn.setOnClickListener {
+            addNickname(it)
+        }
+    }
 
-
-
-        var nickname = nicknameedit.text.toString()
-        nicknametext.text = nickname
-
-
-        donebutton.setOnClickListener {
-            nicknametext.text = nicknameedit.text
-            nicknameedit.text.clear()
-            //view gone
-            nicknameedit.visibility = EditText.GONE
-            donebutton.visibility = Button.GONE
-            //Hide Keyboard
-            nicknameedit.clearFocus()
-            val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-            inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
-
+    private fun addNickname(view: View) {
+        binding.apply{
+            nicknameText.text = binding.nicknameEdit.text
+            invalidateAll()
+            nicknameEdit.visibility = View.GONE
+            doneBtn.visibility = View.GONE
+            nicknameText.visibility = View.VISIBLE
         }
 
 
+        //Hiding Keyboard
+        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
+
     }
+
+
 }
